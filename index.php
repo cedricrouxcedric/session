@@ -1,5 +1,16 @@
-<?php require 'inc/data/products.php'; ?>
-<?php require 'inc/head.php'; ?>
+<?php
+session_start();
+require 'inc/data/products.php';
+require 'inc/head.php';
+if (!empty($_GET['add_to_cart'])){
+    if (!isset($_COOKIE['id'])) {
+        setcookie('id', $_GET['add_to_cart'], time() + 365 * 24 * 3600, null, null, false, true);
+    } else {
+        setcookie('id', $_COOKIE['id'] . ',' . $_GET['add_to_cart'], time() + 365 * 24 * 3600, null, null, false, true);
+    }
+}
+
+?>
 <section class="cookies container-fluid">
     <div class="row">
         <?php foreach ($catalog as $id => $cookie) { ?>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,9 +38,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <?= isset($_SESSION['loginname']) ?
-                        '<li><a href="/comingsoon.php">Chocolates chips</a></li>
-                        <li><a href="/comingsoon.php">Nuts</a></li>
-                    <li><a href="/comingsoon.php">Gluten full</a></li>
+                        '<li><a href="">Chocolates chips</a></li>
+                        <li><a href="">Nuts</a></li>
+                    <li><a href="">Gluten full</a></li>
                     <li>
                         <a href="/cart.php" class="btn btn-warning navbar-btn">
                             <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
@@ -52,7 +55,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <div class="container-fluid text-right">
-        <strong>Hello <?= isset($_SESSION['loginname']) ? $_SESSION['loginname'] . '!': ' Wilder!'?> </strong>
+    <h2>More content coming soon</h2>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
     </div>
-</header>
